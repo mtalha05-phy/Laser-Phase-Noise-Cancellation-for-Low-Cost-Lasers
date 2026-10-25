@@ -1,8 +1,3 @@
-"""
-Configuration module for FT-OPS (Fiber-Optic Transmission Optical Phase Sensing)
-Phase Noise Mitigation Simulation.
-"""
-
 from dataclasses import dataclass
 import numpy as np
 
