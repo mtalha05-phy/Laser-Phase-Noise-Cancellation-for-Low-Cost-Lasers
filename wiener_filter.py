@@ -1,26 +1,3 @@
-"""
-Wiener Filtering Module for Laser Phase Noise Mitigation.
-
-Theory:
-Given the observed noisy phase signal:
-    y(t) = s(t) + v(t)
-where:
-    s(t) = phi_vib(t) is the desired low-frequency acoustic/vibration signal
-    v(t) = phi_L(t) + n(t) is the laser phase drift + detector noise
-
-1. Frequency-Domain Wiener Filter:
-   Non-causal transfer function:
-       H(f) = S_ss(f) / (S_ss(f) + S_vv(f))
-   where S_ss(f) is the signal PSD, and S_vv(f) is the noise PSD.
-   Laser phase noise PSD follows Lorentzian profile:
-       S_{phi_L}(f) = Delta_nu / (pi * f^2)
-
-2. Time-Domain FIR Wiener Filter:
-   Wiener-Hopf optimal filter:
-       R_yy * h = r_ys
-   with symmetric lag delay D = M / 2 to approximate non-causal zero-phase response.
-"""
-
 import numpy as np
 from scipy import linalg, signal
 from typing import Tuple, Optional
