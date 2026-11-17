@@ -1,19 +1,3 @@
-"""
-Linewidth Sensitivity Sweep Study for FT-OPS.
-
-Investigates:
-How does performance scale as laser linewidth transitions from:
-- Ultra-Narrow Linewidth Lasers (NLL): 1 kHz - 10 kHz (High Cost)
-to
-- Standard Commercial DFB Lasers: 100 kHz - 5 MHz (Low Cost)
-
-Plots Output SNR (dB) vs. Laser Linewidth for:
-1. Raw Phase Demodulation
-2. Wiener Filter
-3. Single-Channel DSH
-4. Reference-Assisted DSH
-"""
-
 import os
 import numpy as np
 import matplotlib.pyplot as plt
