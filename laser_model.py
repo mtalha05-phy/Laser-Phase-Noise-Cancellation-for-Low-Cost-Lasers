@@ -1,23 +1,3 @@
-"""
-Laser Phase Noise and Vibration Signal Generation Module.
-
-Physics Model:
-In semiconductor and solid-state lasers, spontaneous emission into the lasing
-mode adds random field fluctuations, leading to white frequency noise.
-The laser optical phase undergoes a Wiener process (Brownian random walk):
-    d phi_L(t) = sqrt(2 * pi * Delta_nu) * dW(t)
-where:
-    Delta_nu is the Full Width at Half Maximum (FWHM) 3-dB Lorentzian linewidth,
-    dW(t) is standard Brownian motion.
-
-Over discrete sampling intervals T_s = 1 / f_s:
-    Delta phi_L[n] ~ N(0, 2 * pi * Delta_nu * T_s)
-    phi_L[n] = sum_{k=0}^n Delta phi_L[k]
-
-The corresponding Phase Noise Power Spectral Density (PSD) exhibits a 1/f^2 slope:
-    S_{phi}(f) = Delta_nu / (pi * f^2)
-"""
-
 import numpy as np
 from typing import Tuple
 from config import SimulationConfig
