@@ -1,14 +1,3 @@
-"""
-Digital Coherent/Heterodyne Receiver and Phase Demodulation Module.
-
-Simulates:
-1. Optical heterodyne mixing of sensing optical carrier with local oscillator.
-2. Photodetection with additive thermal/shot/ASE detector noise.
-3. Digital downconversion to In-phase (I) and Quadrature (Q) baseband components.
-4. Anti-aliasing low-pass filtering.
-5. Arctangent phase extraction and phase unwrapping.
-"""
-
 import numpy as np
 from scipy import signal
 from typing import Tuple
