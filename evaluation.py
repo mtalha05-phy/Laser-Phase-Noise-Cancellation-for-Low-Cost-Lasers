@@ -1,12 +1,3 @@
-"""
-Performance Evaluation, Metrics, and Visualization Module for FT-OPS.
-
-Provides:
-- Metrics: SNR (dB), RMSE (rad), Correlation Coefficient (rho).
-- Power Spectral Density (PSD) estimation using Welch's method.
-- Multi-panel publication-quality Matplotlib figures.
-"""
-
 import numpy as np
 import matplotlib.pyplot as plt
 from scipy import signal
