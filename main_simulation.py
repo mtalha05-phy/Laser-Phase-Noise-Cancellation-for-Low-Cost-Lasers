@@ -1,13 +1,3 @@
-"""
-Main Simulation Script for FT-OPS Laser Phase Noise Mitigation.
-
-Compares:
-1. Raw Unfiltered Demodulated Phase (Baseline)
-2. Optimal Wiener Filtering (Frequency & Time Domain)
-3. Single-Channel Delayed Self-Heterodyne (DSH) Deconvolution
-4. Reference-Assisted Dual-Arm DSH Cancellation
-"""
-
 import sys
 import os
 import numpy as np
