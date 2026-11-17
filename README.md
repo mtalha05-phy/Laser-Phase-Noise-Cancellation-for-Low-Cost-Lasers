@@ -59,26 +59,7 @@ Two DSH processing architectures are provided:
 
 ---
 
-## 3. Project Structure
-
-```
-ft_ops_phase_noise_mitigation/
-├── config.py              # Central simulation parameters (sampling, laser, fiber delay)
-├── laser_model.py         # Brownian motion phase noise & multi-tone vibration synthesis
-├── receiver_model.py      # Heterodyne detection, I/Q downconversion, Butterworth LPF, unwrapping
-├── wiener_filter.py       # Frequency-domain non-causal & time-domain FIR Wiener-Hopf filters
-├── dsh_processor.py       # Differential delay phase, Tikhonov deconvolution, reference cancellation
-├── evaluation.py          # Metrics (SNR, RMSE, Pearson rho), Welch PSD, publication figures
-├── main_simulation.py     # End-to-end benchmark comparison script
-├── linewidth_sweep.py     # Linewidth sweep study (1 kHz to 5 MHz)
-├── ft_ops_simulation.m    # Complete self-contained MATLAB script
-├── requirements.txt       # Python dependencies (numpy, scipy, matplotlib)
-└── README.md              # Project documentation
-```
-
----
-
-## 4. How to Run
+## 3. How to Run
 
 ### Option A: Python Implementation
 1. Install dependencies:
@@ -102,7 +83,7 @@ run('ft_ops_simulation.m')
 
 ---
 
-## 5. Typical Performance Benchmark Results ($\Delta\nu = 500\text{ kHz}$)
+## 4. Typical Performance Benchmark Results ($\Delta\nu = 500\text{ kHz}$)
 
 | Method | Output SNR (dB) | RMSE (rad) | Pearson Correlation ($\rho$) | Qualitative Assessment |
 | :--- | :---: | :---: | :---: | :--- |
@@ -113,7 +94,7 @@ run('ft_ops_simulation.m')
 
 ---
 
-## 6. Conclusions
+## 5. Conclusions
 
 1. **Why Standard Lasers Fail Without Processing**:
    Standard commercial lasers ($\Delta\nu \ge 100\text{ kHz}$) exhibit $1/f^2$ phase noise that is orders of magnitude stronger than weak acoustic signals ($10-200\text{ Hz}$). Without algorithmic or interferometric mitigation, long-haul FT-OPS fails completely.
